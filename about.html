@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me | Artem Kozyr</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const savedLang = localStorage.getItem('lang') || 'en';
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const resolvedTheme = savedTheme === 'dark'
+                ? 'dark'
+                : savedTheme === 'light'
+                    ? 'light'
+                    : (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', resolvedTheme);
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.classList.remove('theme-light', 'theme-dark');
+            document.documentElement.classList.add(`theme-${resolvedTheme}`);
+        })();
+    </script>
+
+    <script src="assets/js/translations.js" defer></script>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <script src="assets/js/app.js" defer></script>
+</head>
+
+<body id="top">
+
+<header class="header" id="header">
+
+    <div class="section">
+
+        <div class="header-inner">
+
+            <a class="logo" href="index.html" aria-label="Go to homepage">
+                <span class="logo-mark">
+                    <img src="assets/images/logo.png" alt="AK" />
+                </span>
+                <span class="logo-name">Artem Kozyr</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a class="main-nav-link" href="index.html#top" data-i18n="nav.home">Home</a>
+                <a class="main-nav-link" href="index.html#projects" data-i18n="nav.portfolio">PET projects</a>
+                <a class="main-nav-link" href="about.html" data-i18n="nav.about">About me</a>
+                <a class="main-nav-link" href="index.html#contacts" data-i18n="nav.contacts">Contacts</a>
+            </nav>
+
+            <div class="site-header-controls">
+                <button
+                        class="control-button"
+                        id="langButton"
+                        type="button"
+                        aria-label="Language switcher"
+                >
+                    EN
+                </button>
+
+                <button
+                        class="control-button"
+                        id="themeButton"
+                        type="button"
+                        aria-label="Theme switcher"
+                >
+                    LIGHT
+                </button>
+
+                <button class="burger" id="burgerButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="sr-only">Open menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="section">
+            <div class="mobile-menu-inner">
+                <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+                    <a class="mobile-menu-link" href="index.html#top" data-i18n="nav.home">Home</a>
+                    <a class="mobile-menu-link" href="index.html#projects" data-i18n="nav.portfolio">PET projects</a>
+                    <a class="mobile-menu-link" href="about.html" data-i18n="nav.about">About me</a>
+                    <a class="mobile-menu-link" href="index.html#contacts" data-i18n="nav.contacts">Contacts</a>
+                </nav>
+
+                <div class="site-header-controls mobile-menu-controls">
+                    <button
+                            class="control-button"
+                            id="langButtonMobile"
+                            type="button"
+                            aria-label="Mobile language switcher"
+                    >
+                        EN
+                    </button>
+
+                    <button
+                            class="control-button"
+                            id="themeButtonMobile"
+                            type="button"
+                            aria-label="Mobile theme switcher"
+                    >
+                        LIGHT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main>
+
+    <section class="section-image margin-top">
+        <div class="section-grid">
+            <div class="section-left">
+                <div>
+                    <p class="section-header" data-i18n="aboutme.title">
+                        About me
+                    </p>
+
+                    <p class="section-text" data-i18n="aboutme.text">
+                        Besides web development, I love outdoor activities — especially hiking, biking, and spending time in nature where I can relax and find inspiration for new projects.
+                    </p>
+                </div>
+
+                <a class="project-repo-link"
+                   href="https://www.youtube.com/channel/UCWd5T2TOTEuqg5iL7znPQsA"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Open my YouTube channel"
+                >
+                    <svg viewBox="0 0 24 24" class="project-repo-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M23.5 7.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-.99C16.7 3.5 12 3.5 12 3.5h0s-4.7 0-8.2.35c-.46.05-1.46.05-2.36.99-.71.72-.94 2.36-.94 2.36S0 9.1 0 11v2c0 1.9.5 3.8.5 3.8s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1C6.5 20.5 12 20.5 12 20.5s4.7 0 8.2-.35c.46-.05 1.46-.05 2.36-.99.71-.72.94-2.36.94-2.36S24 14.9 24 13v-2c0-1.9-.5-3.8-.5-3.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+                    </svg>
+                    <span data-i18n="aboutme.watchvideo">Check out my videos on YouTube</span>
+                </a>
+
+            </div>
+
+            <div class="section-right">
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme1.webp" alt="Artem outdoors" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+
+        <div class="section-header text-center" data-i18n="aboutme.activities">
+            Activities
+        </div>
+
+        <div class="projects-grid">
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme2.webp" alt="Hiking" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.hiking">
+                    Hiking
+                </div>
+            </div>
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme4.webp" alt="Biking" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.biking">
+                    Biking
+                </div>
+            </div>
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme3.webp" alt="Underwater biking" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.ubiking">
+                    Underwater biking ))
+                </div>
+            </div>
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme5.webp" alt="Skiing" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.skiing">
+                    Skiing
+                </div>
+            </div>
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme6.webp" alt="Hiking" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.hikingbackpack">
+                    Hiking with a backpack
+                </div>
+            </div>
+
+            <div>
+                <div class="media-frame media-frame-sm">
+                    <img src="assets/images/aboutme7.webp" alt="Skiing" />
+                </div>
+                <div class="section-text text-center" data-i18n="aboutme.tubaplaying">
+                    Tuba Playing
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="section">
+        <div class="footer-inner">
+            <p class="footer-text">
+                © <span id="currentYear"></span> <span data-i18n="footer.artemkozyr">Artem Kozyr</span>
+            </p>
+            <a class="footer-link" href="#top" data-i18n="footer.backToTop">Back to top</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtyWeather | Artem Kozyr</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico" />
+
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const savedLang = localStorage.getItem('lang') || 'en';
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const resolvedTheme = savedTheme === 'dark'
+                ? 'dark'
+                : savedTheme === 'light'
+                    ? 'light'
+                    : (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', resolvedTheme);
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.classList.remove('theme-light', 'theme-dark');
+            document.documentElement.classList.add(`theme-${resolvedTheme}`);
+        })();
+    </script>
+
+    <script src="../../assets/js/translations.js" defer></script>
+    <link rel="stylesheet" href="../../assets/css/app.css" />
+    <script src="../../assets/js/app.js" defer></script>
+</head>
+
+<body id="top">
+
+<header class="header" id="header">
+
+    <div class="section">
+
+        <div class="header-inner">
+
+            <a class="logo" href="../../index.html" aria-label="Go to homepage">
+                <span class="logo-mark">
+                    <img src="../../assets/images/logo.png" alt="AK" />
+                </span>
+                <span class="logo-name">Artem Kozyr</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a class="main-nav-link" href="../../index.html#top" data-i18n="nav.home">Home</a>
+                <a class="main-nav-link" href="../../index.html#projects" data-i18n="nav.portfolio">PET projects</a>
+                <a class="main-nav-link" href="../../about.html" data-i18n="nav.about">About me</a>
+                <a class="main-nav-link" href="../../index.html#contacts" data-i18n="nav.contacts">Contacts</a>
+            </nav>
+
+            <div class="site-header-controls">
+                <button
+                        class="control-button"
+                        id="langButton"
+                        type="button"
+                        aria-label="Language switcher"
+                >
+                    EN
+                </button>
+
+                <button
+                        class="control-button"
+                        id="themeButton"
+                        type="button"
+                        aria-label="Theme switcher"
+                >
+                    LIGHT
+                </button>
+
+                <button class="burger" id="burgerButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="sr-only">Open menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="section">
+            <div class="mobile-menu-inner">
+                <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+                    <a class="mobile-menu-link" href="../../index.html#top" data-i18n="nav.home">Home</a>
+                    <a class="mobile-menu-link" href="../../index.html#projects" data-i18n="nav.portfolio">PET projects</a>
+                    <a class="mobile-menu-link" href="../../about.html" data-i18n="nav.about">About me</a>
+                    <a class="mobile-menu-link" href="../../index.html#contacts" data-i18n="nav.contacts">Contacts</a>
+                </nav>
+
+                <div class="site-header-controls mobile-menu-controls">
+                    <button
+                            class="control-button"
+                            id="langButtonMobile"
+                            type="button"
+                            aria-label="Mobile language switcher"
+                    >
+                        EN
+                    </button>
+
+                    <button
+                            class="control-button"
+                            id="themeButtonMobile"
+                            type="button"
+                            aria-label="Mobile theme switcher"
+                    >
+                        LIGHT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<main>
+
+    <section class="section margin-top">
+
+        <div class="section-grid">
+
+            <div class="section-left">
+                <div class="section-header" data-i18n="project.housingcompanytitle">
+                    PET Project - Housing Company
+                </div>
+
+                <div class="section-text" data-i18n="project.housingcompanytext">
+                    The web application with functionality for associations of co-owners (Users) of apartment buildings (condominium associations), where each association (entity Companies) has its own dedicated section for posting (Posts).
+                </div>
+
+                <a class="project-repo-link"
+                   href="https://github.com/KozyrOK/house-company-alpine.git"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Open Housing Company GitHub repository"
+                >
+                    <svg viewBox="0 0 24 24" class="project-repo-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 0 0 8.36 22.94c.58.1.79-.25.79-.56 0-.28-.01-1.2-.02-2.17-3.2.69-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.72 0-1.27.45-2.31 1.18-3.12-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.19a10.98 10.98 0 0 1 5.74 0c2.18-1.5 3.14-1.19 3.14-1.19.63 1.58.24 2.75.12 3.04.73.81 1.18 1.85 1.18 3.12 0 4.45-2.7 5.42-5.27 5.71.41.35.78 1.04.78 2.1 0 1.52-.01 2.75-.01 3.12 0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                    <span data-i18n="project.viewprojectgithub">View project in GitHub repository</span>
+                </a>
+
+            </div>
+
+            <div class="section-right">
+                <img
+                        src="assets/housingcompany-project.webp"
+                        alt="housing company"
+                />
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-grid">
+
+            <div class="section-left">
+                <div class="section-header" data-i18n="project.aboutproject">
+                    About project:
+                </div>
+
+                <div class="section-text" data-i18n="project.housingcompanytext1">
+                    The project focuses on practicing the development of a full-featured backend application with a role-based model, REST API, access policies, and a lightweight frontend built with Alpine.js.<br> Theme: a web application for housing associations and their members.
+                </div>
+
+                <div class="section-header" data-i18n="project.technologystack">
+                    Technology Stack:
+                </div>
+
+                <div class="section-text" data-i18n="project1.stack"></div>
+
+            </div>
+
+            <div class="section-right">
+                <img
+                        src="assets/housingcompany-screen.webp"
+                        alt="housing company image"
+                />
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <div class="section">
+        <div class="footer-inner">
+            <p class="footer-text">
+                © <span id="currentYear"></span> <span data-i18n="footer.artemkozyr">Artem Kozyr</span>
+            </p>
+            <a class="footer-link" href="#top" data-i18n="footer.backToTop">Back to top</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artem Kozyr</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const savedLang = localStorage.getItem('lang') || 'en';
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const resolvedTheme = savedTheme === 'dark'
+                ? 'dark'
+                : savedTheme === 'light'
+                    ? 'light'
+                    : (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', resolvedTheme);
+            document.documentElement.setAttribute('data-lang', savedLang);
+            document.documentElement.classList.remove('theme-light', 'theme-dark');
+            document.documentElement.classList.add(`theme-${resolvedTheme}`);
+        })();
+    </script>
+    <script src="assets/js/translations.js" defer></script>
+    <link rel="stylesheet" href="assets/css/app.css"/>
+    <script src="assets/js/app.js" defer></script>
+</head>
+
+<body id="top">
+
+<header class="header" id="header">
+
+    <div class="section">
+
+        <div class="header-inner">
+
+            <a class="logo" href="index.html" aria-label="Go to homepage">
+                    <span class="logo-mark">
+                        <img src="assets/images/logo.png" alt="AK"/>
+                    </span>
+                <span class="logo-name">Artem Kozyr</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a class="main-nav-link" href="#top" data-i18n="nav.home">Home</a>
+                <a class="main-nav-link" href="#projects" data-i18n="nav.portfolio">PET projects</a>
+                <a class="main-nav-link" href="about.html" data-i18n="nav.about">About me</a>
+                <a class="main-nav-link" href="#contacts" data-i18n="nav.contacts">Contacts</a>
+            </nav>
+
+            <div class="site-header-controls">
+                <button
+                        class="control-button"
+                        id="langButton"
+                        type="button"
+                        aria-label="Language switcher"
+                >
+                    EN
+                </button>
+
+                <button
+                        class="control-button"
+                        id="themeButton"
+                        type="button"
+                        aria-label="Theme switcher"
+                >
+                    LIGHT
+                </button>
+
+                <button class="burger" id="burgerButton" type="button" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="sr-only">Open menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="section">
+            <div class="mobile-menu-inner">
+                <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+                    <a class="mobile-menu-link" href="#top" data-i18n="nav.home">Home</a>
+                    <a class="mobile-menu-link" href="#projects" data-i18n="nav.portfolio">PET projects</a>
+                    <a class="mobile-menu-link" href="about.html" data-i18n="nav.about">About me</a>
+                    <a class="mobile-menu-link" href="#contacts" data-i18n="nav.contacts">Contacts</a>
+                </nav>
+
+                <div class="site-header-controls mobile-menu-controls">
+                    <button
+                            class="control-button"
+                            id="langButtonMobile"
+                            type="button"
+                            aria-label="Mobile language switcher"
+                    >
+                        EN
+                    </button>
+
+                    <button
+                            class="control-button"
+                            id="themeButtonMobile"
+                            type="button"
+                            aria-label="Mobile theme switcher"
+                    >
+                        LIGHT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+    <section class="section-image" id="first-section">
+
+        <div class="section-grid">
+
+            <div class="section-left">
+                <div class="intro-block">
+                    <p class="section-header" data-i18n="first-section.title">
+                        Hello, my name`s Artem Kozyr
+                    </p>
+
+                    <p class="section-text" data-i18n="first-section.text">
+                        I'm a web developer.<br>
+                        This is my portfolio website.<br>
+                        Currently, I'm focused on web development and AI integration.<br>
+                        You can see these skills in action through my pet projects.
+                    </p>
+                </div>
+
+                <div class="social-block">
+                    <p class="section-title text-center" data-i18n="first-section.social">
+                        My Social media:
+                    </p>
+
+                    <div class="grid-stretch">
+                        <div>
+                            <a href="https://www.linkedin.com/in/artem-kozyr-733441310">
+                                <svg viewBox="0 0 24 24" class="social-media-icon icon-linkedin" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.98 3.5C3.34 3.5 2 4.84 2 6.48c0 1.63 1.34 2.97 2.98 2.97h.02c1.64 0 2.98-1.34 2.98-2.97C7.98 4.84 6.64 3.5 5 3.5h-.02zM2.4 21h5.2V9H2.4v12zM9.34 9H14v1.64h.07c.65-1.23 2.23-2.53 4.6-2.53 4.92 0 5.83 3.24 5.83 7.45V21h-5.2v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-5.2V9z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://t.me/Kozyr_OK">
+                                <svg viewBox="0 0 24 24" class="social-media-icon icon-telegram" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.5 3.5L2.8 10.6c-.8.3-.8 1.5 0 1.8l4.8 1.5 1.9 5.7c.2.7 1.1.9 1.6.4l2.7-3.2 4.7 3.4c.6.4 1.4.1 1.5-.6l2.2-15c.1-.7-.6-1.2-1.2-1zM8.6 13.6l8.6-5.4-6.7 6.4-.3 2.7-1.6-3.7z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/profile.php?id=100006535998789">
+                                <svg viewBox="0 0 24 24" class="social-media-icon icon-facebook" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.78-3.88 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.57V12h2.8l-.45 2.89h-2.35v6.99A10 10 0 0 0 22 12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.x.com/Kozyr_OK">
+                                <svg viewBox="0 0 24 24" class="social-media-icon icon-x" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7.1L4.7 22H1.6l8-9.2L1 2h7l5 6.6L18.9 2zm-2.4 18h2.1L7.4 4H5.2l11.3 16z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/KozyrOK">
+                                <svg viewBox="0 0 24 24" class="social-media-icon icon-github" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 0 0 8.36 22.94c.58.1.79-.25.79-.56 0-.28-.01-1.2-.02-2.17-3.2.69-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.74.4-1.24.72-1.53-2.56-.29-5.25-1.28-5.25-5.72 0-1.27.45-2.31 1.18-3.12-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.19a10.98 10.98 0 0 1 5.74 0c2.18-1.5 3.14-1.19 3.14-1.19.63 1.58.24 2.75.12 3.04.73.81 1.18 1.85 1.18 3.12 0 4.45-2.7 5.42-5.27 5.71.41.35.78 1.04.78 2.1 0 1.52-.01 2.75-.01 3.12 0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-right">
+                <img
+                        src="assets/images/image-index-light.webp"
+                        id="portraitImage"
+                        data-portrait-dark="assets/images/image-index-dark.webp"
+                        data-portrait-light="assets/images/image-index-light.webp"
+                        alt="Stylized portrait"
+                />
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section" id="resume">
+
+    <div class="resume-panel">
+
+        <div class="resume-panel-header">
+            <div class="section-header resume-header" data-i18n="resume.header">
+                My resume:
+            </div>
+        </div>
+
+        <div class="resume-grid">
+
+            <article class="resume-card">
+                <div class="resume-card-top">
+                    <div class="resume-doc-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" class="resume-doc-svg" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6h20l12 12v34a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z" fill="currentColor" opacity=".16"/>
+                            <path d="M38 6v10a4 4 0 0 0 4 4h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M18 6h20l12 12v34a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M22 28h20M22 36h20M22 44h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="resume-lang-badge">UA</span>
+                    </div>
+
+                    <div class="resume-card-meta">
+                        <div class="resume-card-title">Українська</div>
+                        <div class="resume-card-subtitle" data-i18n="resume.pdfresume">PDF resume</div>
+                    </div>
+                </div>
+
+                <div class="resume-actions">
+                    <a class="resume-link" href="resume/CV_Kozyr_Artem_Web_Dev(ua).pdf" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" class="resume-icon resume-icon-view" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 5c5.5 0 9.5 5.5 9.7 5.7a1 1 0 0 1 0 1.1C21.5 12 17.5 18 12 18S2.5 12 2.3 11.8a1 1 0 0 1 0-1.1C2.5 10.5 6.5 5 12 5zm0 2C8.4 7 5.4 10.2 4.4 11c1 1 4 5 7.6 5s6.6-4 7.6-5C18.6 10.2 15.6 7 12 7zm0 1.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5z"/>
+                        </svg>
+                        <span data-i18n="resume.viewpdf">View PDF</span>
+                    </a>
+
+                    <a class="resume-link" href="resume/CV_Kozyr_Artem_Web_Dev(ua).pdf" download>
+                        <svg viewBox="0 0 24 24" class="resume-icon resume-icon-download" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/>
+                        </svg>
+                        <span data-i18n="resume.downloadpdf">Download PDF</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="resume-card">
+                <div class="resume-card-top">
+                    <div class="resume-doc-icon" aria-hidden="true">
+                        <svg viewBox="0 0 64 64" class="resume-doc-svg" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6h20l12 12v34a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z" fill="currentColor" opacity=".16"/>
+                            <path d="M38 6v10a4 4 0 0 0 4 4h10" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M18 6h20l12 12v34a6 6 0 0 1-6 6H18a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                            <path d="M22 28h20M22 36h20M22 44h14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span class="resume-lang-badge">EN</span>
+                    </div>
+
+                    <div class="resume-card-meta">
+                        <div class="resume-card-title">English</div>
+                        <div class="resume-card-subtitle" data-i18n="resume.pdfresume">PDF resume</div>
+                    </div>
+                </div>
+
+                <div class="resume-actions">
+                    <a class="resume-link" href="resume/CV_Kozyr_Artem_Web_Dev(en).pdf" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" class="resume-icon resume-icon-view" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 5c5.5 0 9.5 5.5 9.7 5.7a1 1 0 0 1 0 1.1C21.5 12 17.5 18 12 18S2.5 12 2.3 11.8a1 1 0 0 1 0-1.1C2.5 10.5 6.5 5 12 5zm0 2C8.4 7 5.4 10.2 4.4 11c1 1 4 5 7.6 5s6.6-4 7.6-5C18.6 10.2 15.6 7 12 7zm0 1.5A3.5 3.5 0 1 1 8.5 12 3.5 3.5 0 0 1 12 8.5zm0 2A1.5 1.5 0 1 0 13.5 12 1.5 1.5 0 0 0 12 10.5z"/>
+                        </svg>
+                        <span data-i18n="resume.viewpdf">View PDF</span>
+                    </a>
+
+                    <a class="resume-link" href="resume/CV_Kozyr_Artem_Web_Dev(en).pdf" download>
+                        <svg viewBox="0 0 24 24" class="resume-icon resume-icon-download" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/>
+                        </svg>
+                        <span data-i18n="resume.downloadpdf">Download PDF</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+    <section class="section margin-top" id="projects">
+
+        <div class="section-header text-center" data-i18n="portfolio.title">
+            My PET projects:
+        </div>
+
+        <div class="projects-grid">
+
+            <article>
+                <a class="project-card-link" href="projects/housing-company/index.html">
+                    <div class="project-card-media media-frame media-frame-sm">
+                        <img src="projects/housing-company/assets/housingcompany-project.webp" alt="House Company project preview" />
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-card-title">Housing Company</h3>
+                        <p class="project-card-text">Laravel 13 / Blade / Alpine.js / MySQL</p>
+                    </div>
+                </a>
+            </article>
+
+            <article>
+                <a class="project-card-link" href="projects/artyweather/index.html">
+                    <div class="project-card-media media-frame media-frame-sm">
+                        <img src="projects/artyweather/assets/artyweather-project.webp" alt="ArtyWeather project preview" />
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-card-title">ArtyWeather</h3>
+                        <p class="project-card-text">Laravel 13 (AI SDK) / Vue.js 3 / PostgreSQL</p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+<footer id="contacts">
+
+    <div class="section">
+
+        <div class="section-title text-center" data-i18n="contacts.title">
+            My Contacts:
+        </div>
+
+        <div class="contacts-panel">
+
+            <a class="contact-box" href="mailto:artem.kozyr777@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2.02c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 12.55l-5.992-4.57h11.983l-5.991 4.57zm0 1.288l-6-4.629v6.771h12v-6.771l-6 4.629z"></path>
+                </svg>
+                <span class="contact-text">artem.kozyr777@gmail.com</span>
+            </a>
+
+            <a class="contact-box" href="tel:+380975252802">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.5 17.311l-1.76-3.397-1.032.505c-1.12.543-3.4-3.91-2.305-4.497l1.042-.513-1.747-3.409-1.053.52c-3.601 1.877 2.117 12.991 5.8 11.308l1.055-.517z"></path>
+                </svg>
+                <span class="contact-text">+380-97-525-28-02</span>
+            </a>
+
+        </div>
+
+        <div class="footer-inner">
+            <p class="footer-text">
+                © <span id="currentYear"></span> <span data-i18n="footer.artemkozyr">Artem Kozyr</span>
+            </p>
+            <a class="footer-link" href="#top" data-i18n="footer.backToTop">Back to top</a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
