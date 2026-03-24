@@ -898,8 +898,14 @@ footer .section-title {
 }
 
 @media (max-width: 768px) {
-    .section {
-        padding-inline: 16px;
+    .section + .section,
+    .section-image + .section,
+    .section + footer {
+        margin-top: 20px;
+    }
+
+    .project-repo-link {
+        margin-bottom: 24px;
     }
 
     .header-inner {
@@ -962,8 +968,22 @@ footer .section-title {
 }
 
 @media (max-width: 480px) {
+    .header-inner {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
     .logo-name {
-        display: none;
+        display: block;
+        min-width: 0;
+        font-size: 1.15rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .control-button {
