@@ -46,14 +46,16 @@ function updateLangButtonsLabel(lang) {
     });
 }
 
-function updatePortraitImage(theme) {
-    const image = document.getElementById('portraitImage');
-    if (!image) return;
+function updateThemeImages(theme) {
+    document.querySelectorAll('[data-image-dark][data-image-light]').forEach((image) => {
+        const darkSrc = image.dataset.imageDark;
+        const lightSrc = image.dataset.imageLight;
+        const nextSrc = theme === 'dark' ? darkSrc : lightSrc;
 
-    const darkSrc = image.dataset.portraitDark;
-    const lightSrc = image.dataset.portraitLight;
-
-    image.src = theme === 'dark' ? darkSrc : lightSrc;
+        if (nextSrc && image.getAttribute('src') !== nextSrc) {
+            image.setAttribute('src', nextSrc);
+        }
+    });
 }
 
 function applyTheme(theme, save = true) {
@@ -68,7 +70,7 @@ function applyTheme(theme, save = true) {
     }
 
     updateThemeButtonsLabel(theme);
-    updatePortraitImage(theme);
+    updateThemeImages(theme);
 }
 
 function applyTranslations(lang) {

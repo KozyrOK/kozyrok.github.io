@@ -4,7 +4,7 @@
 
 ### Overview
 
-Clean, minimalistic landing with dark/light mode support, responsive design and project showcases.
+Clean, minimalistic landing with dark/light and multilingual modes support, responsive design and project showcases.
 
 ### Tech Stack
 
