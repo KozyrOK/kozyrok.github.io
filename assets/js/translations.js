@@ -36,8 +36,8 @@ window.translations = {
         'project.housingcompanytext': "The web application with functionality for associations of co-owners (Users) of apartment buildings (condominium associations), where each association (entity Companies) has its own dedicated section for posting (Posts).",
         'project.housingcompanytext1': "The project focuses on practicing the development of a full-featured backend application with a role-based model, REST API, access policies, and a lightweight frontend built with Alpine.js.<br> Additionally, the project is evolving towards integrating an AI-powered assistant based on Laravel AI SDK. The assistant will act as an in-app chat, helping users navigate the system.",
         'project.artyweathertitle': "PET Project - ArtyWeather",
-        'project.artyweathertext': "The web application for retrieving weather data, processing it, and displaying it.",
-        'project.artyweathertext1': "The web application for fetching weather data from a free API, storing it in a database, displaying it on the frontend, and generating AI-based textual summaries.",
+        'project.artyweathertext': "ArtyWeather is a web application for viewing current weather and forecasts with AI-powered recommendations.",
+        'project.artyweathertext1': "The project is built with Laravel and Vue.js. The backend retrieves weather data from the Open-Meteo API, uses PostgreSQL to store user settings and Redis for caching. Ollama AI generates a concise weather summary and practical recommendations.",
         'project1.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
@@ -59,9 +59,9 @@ window.translations = {
         'project2.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
-            '<li>cron (Laravel Scheduler)</li>' +
+            '<li>Redis</li>' +
             '<li>Open-Meteo API</li>' +
-            '<li>Laravel 13 AI SDK</li>' +
+            '<li>Ollama</li>' +
             '</ul>' +
             '<strong>Frontend:</strong><ul>' +
             '<li>Vue.js 3</li>' +
@@ -110,8 +110,8 @@ window.translations = {
         'project.housingcompanytext': 'Веб-приложение с функционалом для объединений сособственников (Users) многоквартирных домов (ОСМД), где для каждого объединения (сущность Companies) будет создана отдельная часть для размещения постов (Posts).',
         'project.housingcompanytext1': 'Проект ориентирован на практику разработки полноценного backend-приложения с ролевой моделью, REST API, политиками доступа и лёгким frontend, построенным с использованием Alpine.js.<br> Дополнительно проект развивается в сторону интеграции AI-ассистента на базе Laravel AI SDK. Ассистент будет реализован в виде встроенного чата и поможет пользователям ориентироваться в системе.',
         'project.artyweathertitle': 'PET проект — ArtyWeather',
-        'project.artyweathertext': 'Веб-приложение для получение погодных данных, их обработки и отображение',
-        'project.artyweathertext1': 'Веб-приложение с функционалом получение погодных данных через бесплатный API, сохранение данных в БД и отображение данных во фронтенде, генерация текстового summary через ИИ',
+        'project.artyweathertext': 'ArtyWeather — веб-приложение для просмотра текущей погоды и прогноза с AI-рекомендациями.',
+        'project.artyweathertext1': 'Проект построен на Laravel и Vue.js. Backend получает погодные данные через Open-Meteo API, использует PostgreSQL для хранения настроек и Redis для кеширования. Ollama AI формирует краткое описание погодной ситуации и практические рекомендации.',
         'project1.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
@@ -133,9 +133,9 @@ window.translations = {
         'project2.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
-            '<li>cron (Laravel Scheduler)</li>' +
+            '<li>Redis</li>' +
             '<li>Open-Meteo API</li>' +
-            '<li>Laravel 13 AI SDK</li>' +
+            '<li>Ollama</li>' +
             '</ul>' +
             '<strong>Frontend:</strong><ul>' +
             '<li>Vue.js 3</li>' +
@@ -185,8 +185,8 @@ window.translations = {
         'project.housingcompanytext': 'Веб-додаток із функціоналом для об’єднань співвласників багатоквартирних будинків (користувачі), де кожне об’єднання (сутність Companies) має власний розділ для публікацій (Posts).',
         'project.housingcompanytext1': 'Проєкт орієнтований на практику розробки повноцінного backend-додатку з рольовою моделлю, REST API, політиками доступу та легким frontend, побудованим з використанням Alpine.js.<br> Додатково проєкт розвивається у напрямку інтеграції AI-асистента на базі Laravel AI SDK. Асистент буде реалізований у вигляді вбудованого чату та допомагатиме користувачам орієнтуватися в системі.',
         'project.artyweathertitle': 'PET проєкт — ArtyWeather',
-        'project.artyweathertext': 'Веб-додаток для отримання погодних даних, їх обробки та відображення.',
-        'project.artyweathertext1': 'Веб-додаток для отримання погодних даних з безкоштовного API, збереження в базі даних, відображення на frontend та генерації текстових підсумків за допомогою AI.',
+        'project.artyweathertext': 'ArtyWeather — вебзастосунок для перегляду поточної погоди та прогнозу з AI-рекомендаціями.',
+        'project.artyweathertext1': 'Проєкт побудований на Laravel і Vue.js. Backend отримує погодні дані через Open-Meteo API, використовує PostgreSQL для зберігання налаштувань і Redis для кешування. Ollama AI формує короткий опис погодних умов і практичні рекомендації.',
         'project1.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
@@ -208,9 +208,9 @@ window.translations = {
         'project2.stack':
             '<strong>Backend:</strong><ul>' +
             '<li>Laravel 13</li>' +
-            '<li>cron (Laravel Scheduler)</li>' +
+            '<li>Redis</li>' +
             '<li>Open-Meteo API</li>' +
-            '<li>Laravel 13 AI SDK</li>' +
+            '<li>Ollama</li>' +
             '</ul>' +
             '<strong>Frontend:</strong><ul>' +
             '<li>Vue.js 3</li>' +
